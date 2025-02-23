@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 /**
- * Интерфейс с конфигурацией проекта для тестов формы
+ * Интерфейс с конфигурацией проекта для тестов FormPage
  */
 @Config.Sources({"classpath:form_test_config.properties"})
 public interface FormTestConfig extends Config {
@@ -16,28 +16,28 @@ public interface FormTestConfig extends Config {
     String firstName();
 
     /**
-     * Метод возвращает параметр inputLastName из form_test_config.properties
+     * Метод возвращает параметр lastName из form_test_config.properties
      *
      * @return параметр поля ввода Last Name
      */
     String lastName();
 
     /**
-     * Метод возвращает параметр inputUserEmail из form_test_config.properties
+     * Метод возвращает параметр userEmail из form_test_config.properties
      *
      * @return параметр поля ввода User Email
      */
     String userEmail();
 
     /**
-     * Метод возвращает параметр inputUserNumber из form_test_config.properties
+     * Метод возвращает параметр userNumber из form_test_config.properties
      *
      * @return параметр поля ввода User Number
      */
     String userNumber();
 
     /**
-     * Метод возвращает параметр inputSubjects из form_test_config.properties
+     * Метод возвращает параметр subjectsInput из form_test_config.properties
      *
      * @return параметр поля ввода Subjects
      */
@@ -51,10 +51,9 @@ public interface FormTestConfig extends Config {
     String testPicture();
 
     /**
-     * Метод возвращает параметр inputCurrentAddress из form_test_config.properties
+     * Метод возвращает параметр currentAddress из form_test_config.properties
      *
      * @return параметр поля ввода Current Address
      */
     String currentAddress();
-
 }
