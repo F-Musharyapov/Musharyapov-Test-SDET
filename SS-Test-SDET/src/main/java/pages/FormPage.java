@@ -14,7 +14,7 @@ import static utils.ScreenHelper.makeScreenShot;
 import static utils.Waiters.waitUntilVisible;
 
 /**
- * Класс в котором происходит взаимодействие со страннице с формой
+ * Класс в котором происходит взаимодействие со странницей с формой
  */
 public class FormPage {
 
