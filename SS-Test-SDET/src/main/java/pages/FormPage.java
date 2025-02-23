@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 
+import static utils.Waiters.waitUntilVisible;
+
 /**
  * Класс в котором происходит взаимодействие со страннице с формой
  */
@@ -291,6 +293,7 @@ public class FormPage {
     @Step("Клик в поле State и выбора пункта из выпадающего списка")
     public FormPage clickToSelectState() {
         selectState.click();
+        waitUntilVisible(driver, selectStateNCR);
         selectStateNCR.click();
         return this;
     }
@@ -303,6 +306,7 @@ public class FormPage {
     @Step("Клик в поле City и выбора пункта из выпадающего списка")
     public FormPage clickToSelectCity() {
         selectCity.click();
+        waitUntilVisible(driver, selectCityDelhi);
         selectCityDelhi.click();
         return this;
     }
@@ -312,9 +316,10 @@ public class FormPage {
      *
      * @return текущая страница
      */
-    @Step("Клик по кнопке Submit")
+/**    @Step("Клик по кнопке Submit")
     public FormPage clickToSubmit() {
         submitButton.click();
         return this;
     }
+ */
 }
