@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 /**
  * Интерфейс с конфигурацией проекта для тестов формы
  */
-@Config.Sources({"classpath:avito_tests_config.properties"})
+@Config.Sources({"classpath:form_test_config.properties"})
 public interface FormTestConfig extends Config {
 
     /**
@@ -20,28 +20,28 @@ public interface FormTestConfig extends Config {
      *
      * @return параметр поля ввода Last Name
      */
-    String inputLastName();
+    String lastName();
 
     /**
      * Метод возвращает параметр inputUserEmail из form_test_config.properties
      *
      * @return параметр поля ввода User Email
      */
-    String inputUserEmail();
+    String userEmail();
 
     /**
      * Метод возвращает параметр inputUserNumber из form_test_config.properties
      *
      * @return параметр поля ввода User Number
      */
-    String inputUserNumber();
+    String userNumber();
 
     /**
      * Метод возвращает параметр inputSubjects из form_test_config.properties
      *
      * @return параметр поля ввода Subjects
      */
-    String inputSubjects();
+    String subjectsInput();
 
     /**
      * Метод возвращает параметр testPicture из form_test_config.properties
@@ -55,6 +55,6 @@ public interface FormTestConfig extends Config {
      *
      * @return параметр поля ввода Current Address
      */
-    String inputCurrentAddress();
+    String currentAddress();
 
 }
