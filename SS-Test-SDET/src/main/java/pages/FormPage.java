@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 
+import static utils.ScreenHelper.makeScreenShot;
 import static utils.Waiters.waitUntilVisible;
 
 /**
@@ -172,6 +173,7 @@ public class FormPage {
     @Step("Ввод данных в поле ввода First Name")
     public FormPage inputFirstName(String input) {
         firstName.sendKeys(input);
+        makeScreenShot(driver);
         return this;
     }
 
@@ -184,6 +186,7 @@ public class FormPage {
     @Step("Ввод данных в поле ввода Last Name")
     public FormPage inputLastName(String input) {
         lastName.sendKeys(input);
+        makeScreenShot(driver);
         return this;
     }
 
@@ -196,6 +199,7 @@ public class FormPage {
     @Step("Ввод данных в поле ввода User Email")
     public FormPage inputUserEmail(String input) {
         userEmail.sendKeys(input);
+        makeScreenShot(driver);
         return this;
     }
 
@@ -207,6 +211,7 @@ public class FormPage {
     @Step("Выбор элемента в чекбоксе Gender")
     public FormPage clickToGender() {
         gender.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -219,6 +224,7 @@ public class FormPage {
     @Step("Ввод данных в поле ввода User Number")
     public FormPage inputUserNumber(String input) {
         userNumber.sendKeys(input);
+        makeScreenShot(driver);
         return this;
     }
 
@@ -235,6 +241,7 @@ public class FormPage {
         year.click();
         year1991.click();
         day13.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -248,6 +255,7 @@ public class FormPage {
     public FormPage inputSubjectsInput(String input) {
         subjectsInput.sendKeys(input);
         subjectsSelect.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -259,6 +267,7 @@ public class FormPage {
     @Step("Выбор в чекбоксе Hobbies")
     public FormPage clickToHobbiesWrapper() {
         hobbiesWrapper.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -270,6 +279,7 @@ public class FormPage {
     @Step("Загрузка изображения в поле Picture")
     public FormPage uploadPicture() {
         uploadPicture.sendKeys(new File(config.testPicture()).getAbsolutePath());
+        makeScreenShot(driver);
         return this;
     }
 
@@ -282,6 +292,7 @@ public class FormPage {
     @Step("Ввод данных в поле ввода Current Address")
     public FormPage inputCurrentAddress(String input) {
         currentAddress.sendKeys(input);
+        makeScreenShot(driver);
         return this;
     }
 
@@ -295,6 +306,7 @@ public class FormPage {
         selectState.click();
         waitUntilVisible(driver, selectStateNCR);
         selectStateNCR.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -308,6 +320,7 @@ public class FormPage {
         selectCity.click();
         waitUntilVisible(driver, selectCityDelhi);
         selectCityDelhi.click();
+        makeScreenShot(driver);
         return this;
     }
 
@@ -316,10 +329,10 @@ public class FormPage {
      *
      * @return текущая страница
      */
-/**    @Step("Клик по кнопке Submit")
+   @Step("Клик по кнопке Submit")
     public FormPage clickToSubmit() {
         submitButton.click();
+        makeScreenShot(driver);
         return this;
     }
- */
 }
