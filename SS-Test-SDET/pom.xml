@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>SS-Test-SDET</artifactId>
+    <artifactId>Selenium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -13,11 +13,12 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.0</version>
+            <version>7.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -49,10 +50,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <argLine>-noverify</argLine>
-                    <!--<argLine>
+                    <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"
-                    </argLine>-->
+                    </argLine>
                 </configuration>
                 <dependencies>
                     <dependency>
