@@ -13,7 +13,7 @@ import static utils.ScreenHelper.makeScreenShot;
 /**
  * Класс в котором происходит взаимодействие с ответом формы
  */
-public class PopupPage  extends Assert {
+public class SuccessfulPage  extends Assert {
 
     /**
      * Экземпляр драйвера для управления браузером
@@ -25,7 +25,7 @@ public class PopupPage  extends Assert {
      *
      * @param driver драйвер для управления браузером
      */
-    public PopupPage(final WebDriver driver) {
+    public  SuccessfulPage(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -73,21 +73,11 @@ public class PopupPage  extends Assert {
      * @return текущая страница
      */
     @Step("Проверка успешной отправки формы")
-    public PopupPage checkTitle() {
+    public SuccessfulPage checkTitle() {
         String titleForm = title.getText();
 
         Assert.assertEquals("Thanks for submitting the form", titleForm);
         makeScreenShot(driver);
         return this;
-    }
-
-    /**
-     * Метод проверки выведенных данных форме, сравнение с отправленными
-     *
-     * @return текущая страница
-     */
-    @Step("Проверка успешной отправки формы")
-    public void checkElements() {
-
     }
 }

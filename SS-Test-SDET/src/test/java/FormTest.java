@@ -4,7 +4,7 @@ import io.qameta.allure.Feature;
 import org.aeonbits.owner.ConfigFactory;
 import org.testng.annotations.Test;
 import pages.FormPage;
-import pages.PopupPage;
+import pages.SuccessfulPage;
 
 /**
  * Основной класс с тестами FormPage
@@ -36,18 +36,9 @@ public class FormTest extends BaseTest {
                 .clickToSelectCity()
                 .clickToSubmit();
 
-        new PopupPage(driver)
-                .checkTitle()
-                .checkElements();
-
+        new SuccessfulPage(driver)
+                .checkTitle();
     }
 }
 
-
-/*
-+ ассерты
-+ allure
-+
-
-*/
 
