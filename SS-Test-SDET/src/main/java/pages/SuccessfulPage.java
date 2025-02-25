@@ -65,7 +65,6 @@ public class SuccessfulPage  extends Assert {
     @FindBy(xpath = "/html/body/div[5]/div/div/div[2]/div/table/tbody/tr[10]/td[2]")
     private WebElement stateAndCityLabel;
 
-
     /**
      * Метод проверки сообщения в форме
      *
