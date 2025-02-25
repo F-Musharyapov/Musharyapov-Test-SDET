@@ -90,7 +90,4 @@ public class PopupPage  extends Assert {
     public void checkElements() {
 
     }
-
-
 }
-
