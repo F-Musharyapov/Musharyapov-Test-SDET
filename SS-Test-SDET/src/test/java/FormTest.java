@@ -36,9 +36,10 @@ public class FormTest extends BaseTest {
                 .clickToSelectCity()
                 .clickToSubmit();
 
+
         new SuccessfulPage(driver)
-                .checkTitle();
+                .checkHead()
+                .checkTableElement();
     }
 }
-
 

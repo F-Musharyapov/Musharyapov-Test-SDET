@@ -1,5 +1,6 @@
 import config.BaseConfig;
 import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -39,6 +40,9 @@ public class BaseTest {
 
         //Неявное ожидание по умолчанию 10 секунд
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // Stating the Javascript Executor driver
+        JavascriptExecutor js = (JavascriptExecutor)driver;
     }
 
 
