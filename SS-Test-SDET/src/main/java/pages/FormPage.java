@@ -3,6 +3,7 @@ package pages;
 import config.FormTestConfig;
 import io.qameta.allure.Step;
 import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -303,11 +304,13 @@ public class FormPage {
      */
     @Step("Клик в поле State и выбора пункта из выпадающего списка")
     public FormPage clickToSelectState() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectState);
         selectState.click();
         waitUntilVisible(driver, selectStateNCR);
         selectStateNCR.click();
         makeScreenShot(driver);
         return this;
+
     }
 
     /**
